@@ -1,19 +1,26 @@
 header{
     background-color: #17252A;
     color: #ffffff;
-    padding-top: 1px;
-    padding-bottom: 0px;
+    padding-top: 6px;
+    padding-bottom: 7px;
     text-align: center;
-    font-family: 'Times New Roman';
-    font-size: x-large;
+    font-family: Arial;
+    font-size: medium;
     position: relative; bottom: 10px
 }
-
+body{background-color: #feffff;}
 .naglowek{
     
-    font-family: fantasy;
+    font-family: Arial;
     font-size: xxx-large;
     color: #17252A;
+}
+
+.naglowek_bialy{
+    
+    font-family: Arial;
+    font-size: xxx-large;
+    color: #feffff;
 }
 
 .abaut{
@@ -24,5 +31,28 @@ header{
 
 .logo{
     float: left;
-    position: relative; bottom: 40px;
+    position: relative; left: 20px;
+}
+
+.logo2{
+    float: right;
+    position: relative; bottom: 20px;
+}
+
+.mapa{
+    background-color: #2B7A78;
+    color: #feffff;
+    padding-bottom: 5px;
+    position: relative; top: 13px;
+    text-align: center;
+}
+
+footer{
+    font-size: small;
+    text-align: center;
+    background-color: #2B7A78;
+    color: #feffff;
+    padding-top: 1px;
+    padding-left: 30px;
+    position: relative; top: 13px;
 }
