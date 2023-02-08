@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+
+    <head>
+        <meta charset="UFT-8">
+        <link rel="shortcut icon" href="logo.png">
+        <title>02 - Teatr Wielki</title>
+        <link rel="stylesheet" href="CSS\index.css">
+
+        <SCRIPT language="JavaScript">
+            var password; 
+            var pass1="a"; 
+            password=prompt('Podaj odpowiedź z poprzedniego zadania',' '); 
+            if (password==pass1) 
+            alert('Dobra odpowiedź!'); 
+            
+            else{
+                alert("Zła odpowiedź...")
+                window.location="02.html"
+            ; 
+            }
+            
+            </SCRIPT>
+
+
+    </head>
+
+
+    <header>
+        <h1> <a href="index.html/#mapa"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
+            <a href="index.html"><img src="assety\logo_napis.png" alt="" width="170"  href="index.html"></a>
+            <img src="assety\pusty.png" alt="" class="logo2" width="96" height="96" href="index.html"></h1>
+    </header>
+
+    
+    <body>
+        <section class="opis_czarny">
+            <h1 class="naglowek">Teatr Wielki</h1>
+            <p><img src="assety\placeholder_toskania.jpg" alt="" width="480" height="270" class="zdj"/></p>
+
+            <p>Teatr Wielki to teatr operowy otoczony parkami i zielenią,<br>
+                położony blisko mostu teatralnego. Otwarty został w 1910 roku<br>
+                i po dziś dzień można się do niego wybrać by obejrzeć spektakl.<br>
+                W piękne słoneczne dni zaraz po sztuce można wybrać się, usiąść<br>
+                i odpocząć obok fontanny znajdującej się w jednym z parków<br>
+            </p>
+        </section>
+
+        <section class="opis_bialy" id="zadanie">
+            <h1 class="naglowek_bialy">ZADANIE</h1>
+            <p> Podaj dwie najbardziej znane opery kompozytora, którego imienia jest Teatr Wielki.</p>
+
+            <input type="button" onclick="location.href='index.html';" value="Powrót do mapy" class="guzik"/>
+            <input type="button" onclick="location.href='03.html';" value="Następne zadanie" class="guzik"/>
+        </section>
+    
+    </body>
+    <footer><p class="F2023">© 2F 2023</p></footer>
+</html>

@@ -9,44 +9,6 @@ header{
     position: relative; bottom: 10px
 }
 body{background-color: #feffff;}
-.naglowek{
-    
-    font-family: Arial;
-    font-size: xxx-large;
-    color: #17252A;
-}
-
-.naglowek_bialy{
-    
-    font-family: Arial;
-    font-size: xxx-large;
-    color: #feffff;
-}
-
-.abaut{
-    font-size: large;
-    text-align: center;
-    font-family: Arial;
-}
-
-.logo{
-    float: left;
-    position: relative; left: 20px;
-}
-
-.logo2{
-    float: right;
-    position: relative; bottom: 20px;
-}
-
-.cz2{
-    background-color: #2B7A78;
-    color: #feffff;
-    padding-bottom: 5px;
-    position: relative; top: 13px;
-    text-align: center;
-    font-size: larger;
-}
 
 footer{
     font-size: small;
@@ -58,9 +20,78 @@ footer{
     position: relative; top: 13px;
 }
 
-.map_bcg{
-    background-image: url(placeholder_toskania.jpg);
-    background-size: 101%;
-    padding-top: 5%;
-    padding-bottom: 32%;
+.F2023{
+    position: relative; right: 4px;
+
 }
+
+
+.naglowek{
+    
+    font-family: Arial;
+    font-size: xxx-large;
+    color: #17252A;
+}
+
+.naglowek_bialy{
+    position: relative; top: 20px;
+    font-family: Arial;
+    font-size: xxx-large;
+    color: #feffff;
+
+}
+
+.opis_czarny{
+    font-size: large;
+    text-align: center;
+    font-family: Arial;
+    color: #17252A;
+}
+
+
+
+.opis_bialy{
+    background-color: #2B7A78;
+    color: #feffff;
+    padding-bottom: 5px;
+    position: relative; top: 13px;
+    text-align: center;
+    font-size: larger;
+}
+
+.logo{
+    float: left;
+    position: relative; left: 20px;
+}
+
+
+/* logo to jest niewidoczne, służy po to aby napis PsP wyświetlał się na środku*/
+.logo2{
+    float: right;
+    position: relative; bottom: 20px;
+}
+
+/* Guziki */
+
+.guzik{
+    size: 40px;
+    text-transform: uppercase; 
+    background-color: #feffff;  
+    border: 3px solid #17252A;
+    color: #17252A;
+    font-size: large;
+    padding: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+ .guzik:hover{
+    background-color: #3AAFA9; 
+  }
+
+  .guzik:active{
+    background-color: #2B7A78;
+  }
+
