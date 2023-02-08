@@ -39,12 +39,13 @@ body{background-color: #feffff;}
     position: relative; bottom: 20px;
 }
 
-.mapa{
+.cz2{
     background-color: #2B7A78;
     color: #feffff;
     padding-bottom: 5px;
     position: relative; top: 13px;
     text-align: center;
+    font-size: larger;
 }
 
 footer{
@@ -55,4 +56,11 @@ footer{
     padding-top: 1px;
     padding-left: 30px;
     position: relative; top: 13px;
+}
+
+.map_bcg{
+    background-image: url(placeholder_toskania.jpg);
+    background-size: 101%;
+    padding-top: 5%;
+    padding-bottom: 32%;
 }
