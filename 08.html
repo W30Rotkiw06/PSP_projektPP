@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+
+    <head>
+
+        <meta charset="UFT-8">
+        <link rel="shortcut icon" href="assety\logo.png">
+        <title>08-Jezioro Maltańskie</title>
+        <link rel="stylesheet" href="CSS\index.css">
+
+
+        <SCRIPT language="JavaScript">
+            let pass1 = "4604";
+
+            let counter = 0;
+            let wasGuessed = false;
+
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 05 (cztery cyfry)");
+            if(password === pass1){
+                console.log("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
+            }
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+        }
+        </SCRIPT>
+
+
+    </head>
+
+
+
+    <header>
+        <h1> <a href="index.html"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
+            <a href="index.html"><img src="assety\logo_napis.png" alt="" width="170"  href="index.html"></a>
+            <img src="assety\pusty.png" alt="" class="logo2" width="96" height="96" href="index.html"></h1>
+    </header>
+
+    
+    <body>
+        <section class="opis_czarny">
+            <h1 class="naglowek">Jezioro Maltańskie</h1>
+            <p><img src="lokacje\08_malta.png" alt="" width="480" height="270" class="zdj"/></p>
+
+            <p> 
+                Jezioro Maltańskie to sztuczne jezioro, które zostało oddane do użytku w 1952 roku.</br>
+                Co roku odbywają się na nim liczne zawody wioślarskie i kajakarskie,</br>
+                dodatkowo na jeziorze wybudowano fontannę oraz wake park.</br>
+                Jest to więc miejsce, gdzie można spróbować swoich umiejętności w różnych sportach wodnych.
+            </p>
+
+        </section>
+
+        <section class="opis_bialy" id="zadanie">
+            <h1 class="naglowek_bialy">ZADANIE</h1>
+            <p>Wiesz już że jezioro ma średnią długość 20000 dm,  szerokość 5000, a głębokość 30 dm.</br> 
+                Jak myslisz ile litrów wody może znajdować się w tym zbiorniku? (1l=1dm³ i skorzystaj ze wzoru ⅔h×a×b)</p>
+            <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
+            <input type="button" onclick="location.href='07.html';" value="Następne zadanie" class="guzik"/>
+        </section>
+    
+    </body>
+    
+    <footer><p class="F2023">© 2F 2023</p></footer>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+
+    <head>
+
+        <meta charset="UFT-8">
+        <link rel="shortcut icon" href="assety\logo.png">
+        <title>11-Nowe zoo</title>
+        <link rel="stylesheet" href="CSS\index.css">
+
+
+        <SCRIPT language="JavaScript">
+            let pass1 = "1939-1945,1946-1956";
+
+            let counter = 0;
+            let wasGuessed = false;
+
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 10 (2 przedziały dat oddzielone przecinkiem)");
+            if(password === pass1){
+                console.log("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
+            }
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+        }
+        </SCRIPT>
+
+
+    </head>
+
+
+
+    <header>
+        <h1> <a href="index.html"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
+            <a href="index.html"><img src="assety\logo_napis.png" alt="" width="170"  href="index.html"></a>
+            <img src="assety\pusty.png" alt="" class="logo2" width="96" height="96" href="index.html"></h1>
+    </header>
+
+    
+    <body>
+        <section class="opis_czarny">
+            <h1 class="naglowek">Nowe zoo</h1>
+            <p><img src="lokacje\11_zoo.png" alt="" width="480" height="270" class="zdj"/></p>
+
+            <p> 
+                Nowe Zoo to drugie największe zoo w Polsce.</br> 
+                Na niemal 121ha powierzchni znajduje się mnóstwo gatunków zwierząt,</br>
+                również tych zagrożonych wyginięciem. Zoo słynie z kolekcji ptaków drapieżnych, sów i słoniarni,</br> 
+                lecz możemy tam zobaczyć również tygrysy, niedźwiedzie, rysie, a nawet pandy małe.</br> 
+                Nowe Zoo oferuje możliwość adopcji podopiecznych, która polega na finansowaniu jedzenia dla adoptowanego zwierzątka.
+            </p>
+
+        </section>
+
+        <section class="opis_bialy" id="zadanie">
+            <h1 class="naglowek_bialy">ZADANIE</h1>
+            <p>Oprócz żyrafy jakiego innego dużego ssaka można spotkac w żyrafiarni?</p>
+            <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
+            <input type="button" onclick="location.href='07.html';" value="Następne zadanie" class="guzik"/>
+        </section>
+    
+    </body>
+    
+    <footer><p class="F2023">© 2F 2023</p></footer>
+</html>
