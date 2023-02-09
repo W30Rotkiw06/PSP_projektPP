@@ -4,18 +4,19 @@
     <head>
         <meta charset="UFT-8">
         <link rel="shortcut icon" href="assety\logo.png">
-        <title>02 - Teatr Wielki</title>
+        <title>06 - Kościół Św. Rocha</title>
         <link rel="stylesheet" href="CSS\index.css">
+
 
         <SCRIPT language="JavaScript">
             var password; 
-            var pass1=1919;
+            var pass1 = "franciszek ratajski";
             var unlocked=false;
             var attempts=3;
             while (!unlocked && attempts != 0){
-                password = prompt('Podaj odpowiedź z zadania nr 01','podaj datę'); 
-
-                if (password == pass1){
+                password = prompt('Podaj odpowiedź z zadania nr 05',''); 
+                if (password.toLowerCase()==pass1) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
+                {
                     alert('Dobra odpowiedź!');
                     unlocked = true;
                 } else {
@@ -24,14 +25,13 @@
                 }
             }
             if (!unlocked){
-                window.location="01.html";
+                window.location="04.html";
             }
-            
-            
-        </SCRIPT>
+            </SCRIPT>
 
 
     </head>
+
 
 
     <header>
@@ -43,24 +43,24 @@
     
     <body>
         <section class="opis_czarny">
-            <h1 class="naglowek">Teatr Wielki</h1>
-            <p><img src="lokacje\02_teatr_wielki.png" alt="" width="480" height="270" class="zdj"/></p>
+            <h1 class="naglowek">Kościół Św. Rocha</h1>
+            <p><img src="lokacje\06_roch.png" alt="" width="480" height="270" class="zdj"/></p>
 
-            <p>Teatr Wielki to teatr operowy otoczony parkami i zielenią,<br>
-                położony blisko mostu teatralnego. Otwarty został w 1910 roku<br>
-                i po dziś dzień można się do niego wybrać by obejrzeć spektakl.<br>
-                W piękne słoneczne dni zaraz po sztuce można wybrać się, usiąść<br>
-                i odpocząć obok fontanny znajdującej się w jednym z parków.<br>
+            <p> 
+                Kościół Św. Rocha to kościół rzymskokatolicki znajdujący się<br>
+                na prawo od warty. Od 2017 sprawuje on funkcje kościoła stacyjnego.<br>
             </p>
+
         </section>
+
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
-            <p> Podaj dwie najbardziej znane opery kompozytora, którego imienia jest Teatr Wielki.</p>
-
+            <p> Ile ołtarzy znajduje się w Kościele Św. Rocha?</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='03.html';" value="Następne zadanie" class="guzik"/>
+            <input type="button" onclick="location.href='06.html';" value="Następne zadanie" class="guzik"/>
         </section>
     
     </body>
+    
     <footer><p class="F2023">© 2F 2023</p></footer>
 </html>

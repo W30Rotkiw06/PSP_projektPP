@@ -3,29 +3,34 @@
 
     <head>
         <meta charset="UFT-8">
-        <link rel="shortcut icon" href="logo.png">
-        <title>02 - Teatr Wielki</title>
+        <link rel="shortcut icon" href="assety\logo.png">
+        <title>03 - Pomnik Ofiar Czerwca 1956</title>
         <link rel="stylesheet" href="CSS\index.css">
 
         <SCRIPT language="JavaScript">
             var password; 
-            var pass1="";
-            var pass2="";
-            password=prompt('Podaj odpowiedź z poprzedniego zadania',' '); 
-            if (password.toUpperCase()==pass1 || password.toUpperCase()==pass2) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
-            alert('Dobra odpowiedź!'); 
-            
-            else{
-                alert("Zła odpowiedź...")
-                window.location="02.html"
-            ; 
+            var pass1 = "halka, straszny dwór";
+            var pass2 = "straszny dwór, halka";
+            var unlocked=false;
+            var attempts=3;
+            while (!unlocked && attempts != 0){
+                password = prompt('Podaj odpowiedź z zadania nr 02','odpowiedzi rozdziel ", " '); 
+                if (password.toLowerCase()==pass1 || password.toLowerCase()==pass2) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
+                {
+                    alert('Dobra odpowiedź!');
+                    unlocked = true;
+                } else {
+                    attempts--;
+                    alert("Zła odpowiedź...\nPozostało prób: " + attempts);
+                }
             }
-            
+            if (!unlocked){
+                window.location="02.html";
+            }
             </SCRIPT>
 
 
     </head>
-
 
     <header>
         <h1> <a href="index.html"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
@@ -36,23 +41,24 @@
     
     <body>
         <section class="opis_czarny">
-            <h1 class="naglowek">Teatr Wielki</h1>
-            <p><img src="lokacje\02_teatr_wielki.png" alt="" width="480" height="270" class="zdj"/></p>
+            <h1 class="naglowek">Pomnik Ofiar Czerwca 1956</h1>
+            <p><img src="lokacje\03_pomnik_ofiar.png" alt="" width="480" height="270" class="zdj"/></p>
 
-            <p>Teatr Wielki to teatr operowy otoczony parkami i zielenią,<br>
-                położony blisko mostu teatralnego. Otwarty został w 1910 roku<br>
-                i po dziś dzień można się do niego wybrać by obejrzeć spektakl.<br>
-                W piękne słoneczne dni zaraz po sztuce można wybrać się, usiąść<br>
-                i odpocząć obok fontanny znajdującej się w jednym z parków<br>
+            <p>Pomnik ofiar czerwca 56 położony jest na placu Adama Mickiewicza.<br>
+                Budowla upamiętnia wydarzenia z poznańskiego czerwca 56, czyli<br>
+                z pierwszego strajku generalnego w PRL, który został krwawo stłumiony.<br>
+                Często odwiedzany przez ludzi o różnych upodobaniach, jednakże<br>
+                szczególnie polecany obejrzenia dla osób zainteresowanych historią.<br>
             </p>
+
         </section>
 
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
-            <p> Podaj dwie najbardziej znane opery kompozytora, którego imienia jest Teatr Wielki.</p>
+            <p> Co symbolizują 2 krzyże i splatający je sznur?</p>
 
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='03.html';" value="Następne zadanie" class="guzik"/>
+            <input type="button" onclick="location.href='04.html';" value="Następne zadanie" class="guzik"/>
         </section>
     
     </body>
