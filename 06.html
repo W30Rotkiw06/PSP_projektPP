@@ -2,6 +2,7 @@
 <html lang="PL">
 
     <head>
+
         <meta charset="UFT-8">
         <link rel="shortcut icon" href="assety\logo.png">
         <title>06 - Kościół Św. Rocha</title>
@@ -9,25 +10,24 @@
 
 
         <SCRIPT language="JavaScript">
-            var password; 
-            var pass1 = "franciszek ratajski";
-            var unlocked=false;
-            var attempts=3;
-            while (!unlocked && attempts != 0){
-                password = prompt('Podaj odpowiedź z zadania nr 05',''); 
-                if (password.toLowerCase()===pass1) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
-                {
-                    alert('Dobra odpowiedź!');
-                    unlocked = true;
-                } else {
-                    attempts--;
-                    alert("Zła odpowiedź...\nPozostało prób: " + attempts);
-                }
+            let pass1 = "Franciszek Ratajski";
+
+            let counter = 0;
+            let wasGuessed = false;
+
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 05");
+            if(password === pass1){
+                console.log("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
             }
-            if (!unlocked){
-                window.location="index.html#mapa";
-            }
-            </SCRIPT>
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+        }
+        </SCRIPT>
 
 
     </head>

@@ -2,30 +2,35 @@
 <html lang="PL">
 
     <head>
+
         <meta charset="UFT-8">
-        <link rel="shortcut icon" href="logo.png">
+        <link rel="shortcut icon" href="assety\logo.png">
         <title>07 - Kampus Piotrowo Politechnika</title>
         <link rel="stylesheet" href="CSS\index.css">
 
-        <SCRIPT language="JavaScript">
-            let randomPassword = "a";
 
+        <SCRIPT language="JavaScript">
+            var password; 
+            var pass1=3;
+            
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
-                let pw = prompt("Type in a Password");
-            if(pw === randomPassword){
-                console.log("Here is the picture");  
+                let password = prompt("Podaj odpowiedź z zadania nr 01");
+            if(password == pass1){ // == celowo
+                alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
-                alert(`This was your ${counter+1} try`);
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
             }
                 counter ++;
-                if (counter == 3)
-                    window.location="PL/06.html"
-}
-            </SCRIPT>
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+            }
+            
+            
+        </SCRIPT>
 
 
     </head>
@@ -37,29 +42,25 @@
             <img src="assety\pusty.png" alt="" class="logo2" width="96" height="96" href="index.html"></h1>
     </header>
 
-    
     <body>
-        <section class="abaut">
+        <section class="opis_czarny">
             <h1 class="naglowek">Kampus Piotrowo Politechnika</h1>
-            <p><img src="placeholder_toskania.jpg" alt="" width="480" height="270" class="zdj"/></p>
+            <p><img src="lokacje\07_kampus.png" alt="" width="480" height="270" class="zdj"/></p>
             <p>Kampus Piotrowo to największy kampus Politechniki Poznańskiej.</br>
             Znajduje się tu centrum wykładowe, biblioteka, centrum sportu oraz większość wydziałów tej uczelni.</br>
             Politechnika Poznańska oferuje wiele kierunków ścisłych, między innymi architekturę, budownictwo,</br>
             automatykę i robotykę, informatykę, energetykę, a nawet lotnictwo i prowadzi je na wysokim poziomie kształcenia. </p>
         </section>
 
-        <section class="cz2" id="zadanie">
+        <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
             <p>Jakie cyfry ma narysowane samolot na środku kampusu?</p>
 
+            <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
+            <input type="button" onclick="location.href='08.html';" value="Następne zadanie" class="guzik"/>
 
-            <input type="button" onclick="location.href='index.html';" value="Powrót do mapy" class="powrot"/>
-            <input type="button" onclick="location.href='index.html';" value="Następne zadanie" class="powrot"/>
         </section>
-
-        
-
-    
     </body>
-    <footer><p>© 2F 2023</p></footer>
+    <footer><p class="F2023">© 2F 2023</p></footer>
+
 </html>

@@ -10,21 +10,21 @@
         <SCRIPT language="JavaScript">
             var password; 
             var pass1=1919;
-            var unlocked=false;
-            var attempts=3;
-            while (!unlocked && attempts != 0){
-                password = prompt('Podaj odpowiedź z zadania nr 01','podaj datę'); 
+            
+            let counter = 0;
+            let wasGuessed = false;
 
-                if (password === pass1){
-                    alert('Dobra odpowiedź!');
-                    unlocked = true;
-                } else {
-                    attempts--;
-                    alert("Zła odpowiedź...\nPozostało prób: " + attempts);
-                }
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 01");
+            if(password == pass1){ // == celowo
+                alert("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
             }
-            if (!unlocked){
-                window.location="index.html#mapa";
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
             }
             
             

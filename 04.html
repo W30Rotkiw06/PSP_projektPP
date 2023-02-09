@@ -11,23 +11,24 @@
             var password; 
             var pass1 = "wiara w boga, pokładanie w nim nadzieji";
             var pass2 = "śmierć i zmartwychwstanie";
-            var unlocked=false;
-            var attempts=3;
-            while (!unlocked && attempts != 0){
-                password = prompt('Podaj odpowiedź z zadania nr 03',''); 
-                if (password.toLowerCase()===pass1 || password.toLowerCase()===pass2) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
-                {
-                    alert('Dobra odpowiedź!');
-                    unlocked = true;
-                } else {
-                    attempts--;
-                    alert("Zła odpowiedź...\nPozostało prób: " + attempts);
-                }
+            let counter = 0;
+            let wasGuessed = false;
+
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 03");
+                if(password != null)
+                    password = password.toLowerCase();
+            if(password === pass1 || password === pass2){
+                alert("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
             }
-            if (!unlocked){
-                window.location="index.html#mapa";
-            }
-            </SCRIPT>
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+            }    
+        </SCRIPT>
 
 
     </head>
@@ -56,7 +57,6 @@
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
             <p> Korzystając ze Szyfru Cezara przetłumacz:<br> Kgótżm Ażjcnuml<br>Octlcó Tgłgzuml<br>Łgtaż Trbżeml</p>
-
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
             <input type="button" onclick="location.href='05.html';" value="Następne zadanie" class="guzik"/>
         </section>
