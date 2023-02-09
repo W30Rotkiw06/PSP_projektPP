@@ -15,18 +15,34 @@
             while (!unlocked && attempts != 0){
                 password = prompt('Podaj odpowiedź z zadania nr 09',''); 
 
-                if (password.toUpperCase() == pass1){
+                if (password.toUpperCase() === pass1){
                     alert('Dobra odpowiedź!');
                     unlocked = true;
-                } else {
+                } 
+                else {
                     attempts--;
                     alert("Zła odpowiedź...\nPozostało prób: " + attempts);
                 }
             }
-            if (!unlocked){
-                window.location="09.html";
+            if (attempts == 0){
+                window.location="index.html#mapa";
             }
         </script>
+
+        <SCRIPT language="JavaScript">
+            var password; 
+            var pass1="a"; 
+            password=prompt('Podaj odpowiedź z poprzedniego zadania',' '); 
+            if (password.toUpperCase() == pass1) 
+            alert('Dobra odpowiedź!'); 
+
+            else{
+                alert("Zła odpowiedź...")
+                window.location="https://w30rotkiw06.github.io/PSP_projektPP/01.html"
+            ; 
+            }
+
+            </SCRIPT>
 
     </head>
 

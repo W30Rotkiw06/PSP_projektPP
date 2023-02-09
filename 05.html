@@ -16,7 +16,7 @@
             var attempts=3;
             while (!unlocked && attempts != 0){
                 password = prompt('Podaj odpowiedź z zadania nr 04','odpowiedzi rozdziel przecinkami'); 
-                if (password.toLowerCase()==pass1 || password.toLowerCase()==pass2) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
+                if (password.toLowerCase()===pass1 || password.toLowerCase()==pass2) // zabezpieczenie tzw. debiloodporne, tzn bez względu na kolejność, czy wielkość znaków odp będzie prawidłowa
                 {
                     alert('Dobra odpowiedź!');
                     unlocked = true;
