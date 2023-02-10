@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+
+    <head>
+        <meta charset="UFT-8">
+        <link rel="shortcut icon" href="assety\logo.png">
+        <title>Poznaj Swój Poznań</title>
+        <link rel="stylesheet" href="CSS\index.css">
+
+        <SCRIPT language="JavaScript">
+            
+            let pass1 = "cybina";
+
+            let counter = 0;
+            let wasGuessed = false;
+
+            while(!wasGuessed && counter < 3){
+                let password = prompt("Podaj odpowiedź z zadania nr 12\nWpisz nazwę rzeki");
+                if(password != null)
+                    password = password.toLowerCase();
+            if(password === pass1){
+                console.log("Dobra odpowiedź!");  
+                wasGuessed = true;
+            }else{
+                alert(`Zła odpowiedź, to była ${counter+1} próba`);
+            }
+                counter ++;
+                if (counter == 3 && !wasGuessed)
+                    window.location="index.html#mapa";
+        }
+        </SCRIPT>
+
+    </head>
+
+    <header>
+        <h1><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html">
+            <img src="assety\logo_napis.png" alt="" width="170"  href="index.html">
+            <img src="assety\pusty.png" alt="" class="logo2" width="96" height="96" href="index.html"></h1>
+    </header>
+    
+    <body>
+        
+        <section class="opis_czarny">
+
+            <h1 class="naglowek">Gratulację</h1>
+            <p><img src="assety\placeholder_toskania.jpg" alt="" width="505" class="zdj"/></p>
+            <p> Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
+                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
+                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
+                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
+                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje</p>
+        </section>
+        
+        <section class="opis_bialy" id="zadanie">
+            <h1 class="naglowek_bialy">Podobało ci się?</h1>
+            <p>kliknij w poniższy przycisk, aby wypełnić ankietę zwrotna.</p>
+            <input type="button" onclick="location.href='https://forms.gle/v1uNTPzNnxuW8PzMA';" value="Wypełnij ankietę" class="guzik"/>
+        </section>
+
+    </body>
+    <footer><p class="F2023">© 2F 2023</p></footer>
+</html>
