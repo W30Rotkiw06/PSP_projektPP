@@ -18,7 +18,7 @@
             while(!wasGuessed && counter < 3){
                 let password = prompt("Podaj odpowiedź z zadania nr 11 (Nazwa zwierzęcia z wielkiej litery)");
             if(password === pass1){
-                console.log("Dobra odpowiedź!");  
+                alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
@@ -29,10 +29,7 @@
         }
         </SCRIPT>
 
-
     </head>
-
-
 
     <header>
         <h1> <a href="index.html"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
@@ -60,7 +57,7 @@
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
             <p>W dolinie jakiej rzeki znajduje sie ścieżka w koronie drzew?</p>
-            <input type="button" onclick="location.href='index.html#mapa';" value="Zakończ grę" class="guzik"/>
+            <input type="button" onclick="location.href='finish.html';" value="Zakończ grę" class="guzik"/>
         </section>
     
     </body>

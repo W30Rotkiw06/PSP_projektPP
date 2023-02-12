@@ -19,7 +19,7 @@
                 if(password != null)
                     password = password.toLowerCase();
             if(password === pass1){
-                console.log("Dobra odpowiedź!");  
+                alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
@@ -42,18 +42,14 @@
         
         <section class="opis_czarny">
 
-            <h1 class="naglowek">Gratulację</h1>
-            <p><img src="assety\placeholder_toskania.jpg" alt="" width="505" class="zdj"/></p>
-            <p> Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
-                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
-                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
-                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje<br>
-                Tutaj będą gratulacje Tutaj będą gratulacje tutaj będą gratulacje</p>
+            <h1 class="naglowek">Gratulację!</h1>
+            <p><img src="assety\puchar.png" alt="" width="505" class="zdj"/></p>
+            <p> Gratulujemy ukończenia gry terenowej "Poznaj Swój Poznań"!<br>
         </section>
         
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">Podobało ci się?</h1>
-            <p>kliknij w poniższy przycisk, aby wypełnić ankietę zwrotna.</p>
+            <p>kliknij w poniższy przycisk, aby wypełnić ankietę zwrotną.</p>
             <input type="button" onclick="location.href='https://forms.gle/v1uNTPzNnxuW8PzMA';" value="Wypełnij ankietę" class="guzik"/>
         </section>
 
