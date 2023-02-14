@@ -8,25 +8,32 @@
         <link rel="stylesheet" href="CSS\index.css">
 
         <SCRIPT language="JavaScript">
-            let pass1 = "a";
+            var password; 
+            var pass1 = "1939-1945 i 1946-1956";
+            var pass2 = "1946-1956 i 1939-1945";
+            var pass3 = "1946-1956, 1939-1945";
+            var pass4 = "1939-1945, 1946-1956";
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
                 let password = prompt("Podaj odpowiedź z zadania nr 09");
-                if(password != null){
-                    password = password.toLowerCase();}
-            if(password === pass1){
+                if(password != null)
+                    password = password.toLowerCase();
+            if(password === pass1 || password === pass2 || password === pass3 || password === pass4){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
+                if(counter != 1)
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
+                else{
+                    alert(`Zła odpowiedź, to była ${counter+1} próba);
+                }
             }
                 counter ++;
                 if (counter == 3 && !wasGuessed)
                     window.location="index.html#mapa";
-
-        }
+            }    
         </SCRIPT>
     </head>
 
@@ -58,7 +65,7 @@
 
 
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='11.html';" value="Następne zadanie" class="guzik"/>
+            <input type="button" onclick="location.href='11.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
         
     </body>
