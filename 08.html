@@ -10,23 +10,30 @@
 
 
         <SCRIPT language="JavaScript">
-            let pass1 = "4604";
-
+            var password; 
+            var pass1 = "4604";
+            
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
-                let password = prompt("Podaj odpowiedź z zadania nr 05 (cztery cyfry)");
+                let password = prompt("Podaj odpowiedź z zadania nr 07");
+                if(password != null)
+                    password = password.toLowerCase();
             if(password === pass1){
-                console.log("Dobra odpowiedź!");  
+                alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
+                if(counter != 1)
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
+                else{
+                    alert(`Zła odpowiedź, to była ${counter+1} próba);
+                }
             }
                 counter ++;
                 if (counter == 3 && !wasGuessed)
                     window.location="index.html#mapa";
-        }
+            }    
         </SCRIPT>
 
 
@@ -60,7 +67,7 @@
             <p>Wiesz już że jezioro ma średnią długość 20000 dm,  szerokość 5000, a głębokość 30 dm.</br> 
                 Jak myslisz ile litrów wody może znajdować się w tym zbiorniku? (1l=1dm³ i skorzystaj ze wzoru ⅔h×a×b)</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='07.html';" value="Następne zadanie" class="guzik"/>
+            <input type="button" onclick="location.href='07.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
     
     </body>
