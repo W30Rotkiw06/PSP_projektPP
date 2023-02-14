@@ -15,9 +15,9 @@
             var pass2 = "Ptyś, Balbinka, Zwierzyniec, Maltanka";
             var pass3 = "Balbinka, Zwierzyniec, Maltanka, Ptyś";
             var pass4 = "Zwierzyniec, Maltanka, Ptyś, Balbinka";
-            var pass2 = "Maltanka, Ptyś, Zwierzyniec, Balbinka";
-            var pass2 = "Maltanka, Balbinka, Ptyś, Zwierzyniec";
-            var pass2 = "Maltanka, Zwierzyniec, Ptyś, Balbinka";
+            var pass5 = "Maltanka, Ptyś, Zwierzyniec, Balbinka";
+            var pass6 = "Maltanka, Balbinka, Ptyś, Zwierzyniec";
+            var pass7 = "Maltanka, Zwierzyniec, Ptyś, Balbinka";
             let counter = 0;
             let wasGuessed = false;
 
@@ -25,19 +25,15 @@
                 let password = prompt("Podaj odpowiedź z zadania nr 10");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1 || password === pass2){
+            if(password === pass1 || password === pass2 || password === pass3 || password === pass4 || password === pass5 || password === pass6 || password === pass7){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
-                if(counter != 1)
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
-                else{
-                    alert(`Zła odpowiedź, to była ${counter+1} próba);
-                }
-            }
                 counter ++;
                 if (counter == 3 && !wasGuessed)
                     window.location="index.html#mapa";
+            }
             }    
         </SCRIPT>
 
