@@ -10,13 +10,15 @@
 
 
         <SCRIPT language="JavaScript">
-            let pass1 = "Franciszek Ratajski";
+            let pass1 = "franciszek ratajczak";
 
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
                 let password = prompt("Podaj odpowiedź z zadania nr 05");
+                if(password != null){
+                    password = password.toLowerCase();}
             if(password === pass1){
                 console.log("Dobra odpowiedź!");  
                 wasGuessed = true;

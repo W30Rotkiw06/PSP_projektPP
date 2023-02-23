@@ -18,9 +18,7 @@
 
             while(!wasGuessed && counter < 3){
                 let password = prompt("Podaj odpowiedź z zadania nr 07");
-                if(password != null)
-                    password = password.toLowerCase();
-            if(password === pass1){
+            if(password == pass1){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
@@ -65,7 +63,7 @@
             <p>Wiesz już, że jezioro ma średnią długość 20000 dm,  szerokość 5000 dm, a głębokość 30 dm.</br> 
                 Jak myslisz ile litrów wody może znajdować się w tym zbiorniku? (1l=1dm³ i skorzystaj ze wzoru ⅔h×a×b)</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='07.html';" value="Udziel odpowiedzi" class="guzik"/>
+            <input type="button" onclick="location.href='09.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
     
     </body>

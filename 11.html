@@ -16,13 +16,13 @@
             var pass3 = "balbinka, zwierzyniec, maltanka, ptyś";
             var pass4 = "zwierzyniec, maltanka, ptyś, balbinka";
             var pass5 = "maltanka, ptyś, zwierzyniec, balbinka";
-            var pass6 = "Maltanka, Balbinka, Ptyś, Zwierzyniec";
-            var pass7 = "Maltanka, Zwierzyniec, Ptyś, Balbinka";
+            var pass6 = "maltanka, balbinka, ptyś, zwierzyniec";
+            var pass7 = "maltanka, zwierzyniec, ptyś, balbinka";
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
-                let password = prompt("Podaj odpowiedź z zadania nr 10");
+                let password = prompt("Podaj odpowiedź z zadania nr 10 (nazwy stacji oddziel przecinkami i spacją)");
                 if(password != null)
                     password = password.toLowerCase();
             if(password === pass1 || password === pass2 || password === pass3 || password === pass4 || password === pass5 || password === pass6 || password === pass7){
@@ -56,8 +56,8 @@
 
             <p> 
                 Nowe Zoo to drugie największe zoo w Polsce.</br> 
-                Na niemal 121ha powierzchni znajduje się mnóstwo gatunków zwierząt,</br>
-                również tych zagrożonych wyginięciem. Zoo słynie z kolekcji ptaków drapieżnych, sów i słoniarni,</br> 
+                Na niemal 121ha powierzchni znajduje się mnóstwo gatunków zwierząt, również tych</br>
+                zagrożonych wyginięciem. Zoo słynie z kolekcji ptaków drapieżnych, sów i słoniarni,</br> 
                 lecz możemy tam zobaczyć również tygrysy, niedźwiedzie, rysie, a nawet pandy małe.</br> 
                 Nowe Zoo oferuje możliwość adopcji podopiecznych, która polega na finansowaniu jedzenia dla adoptowanego zwierzątka.
             </p>
@@ -68,7 +68,7 @@
             <h1 class="naglowek_bialy">ZADANIE</h1>
             <p>Oprócz żyrafy jakiego innego dużego ssaka można spotkac w żyrafiarni?</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='10.html';" value="Udziel odpowiedzi" class="guzik"/>
+            <input type="button" onclick="location.href='12.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
     
     </body>

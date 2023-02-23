@@ -11,8 +11,8 @@
 
         <SCRIPT language="JavaScript">
             var password; 
-            var pass1 = "Nosorożec";
-            
+            var pass1 = "nosorożec";
+            var pass2 = "nosorożca";
             let counter = 0;
             let wasGuessed = false;
 
@@ -20,7 +20,7 @@
                 let password = prompt("Podaj odpowiedź z zadania nr 11");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1){
+            if(password === pass1 || password === pass2){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
@@ -52,7 +52,8 @@
                 Jest to drugi tego typu obiekt w Polsce.</br>
                 Ze ścieżki możemy obserwować korony drzew.</br>
                 Wejście na szlak znajduje się niedaleko wejścia do Nowego Zoo.</br>
-                Ścieżka jest zupełnie darmowa, znajdują się na niej liczne ławki do odpoczynku na łonie natury.
+                Ścieżka jest zupełnie darmowa, znajdują się na niej<br>
+                liczne ławki do odpoczynku na łonie natury.
             </p>
 
         </section>

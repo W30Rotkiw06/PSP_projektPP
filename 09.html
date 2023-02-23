@@ -11,18 +11,19 @@
 
         <SCRIPT language="JavaScript">
            var password; 
-            var pass1 = "2000000000";
+            var pass1 = 2000000000;
             var pass2 = "2 mld";
             var pass3 = "2mld"
+            var pass4 ="2 000 000 000"
             
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
-                let password = prompt("Podaj odpowiedź z zadania nr 08");
+                let password = prompt("Podaj odpowiedź z zadania nr 08 (wpisz samą liczbę)");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1 || password === pass2 || password === pass3){
+            if(password == pass1 || password === pass2 || password === pass3 || password === pass4){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
@@ -65,7 +66,7 @@
             <h1 class="naglowek_bialy">ZADANIE</h1>
             <p>Z jakiego okresu jest najwięcej zmarłych harcerzy (odczytaj z pomnika)?</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
-            <input type="button" onclick="location.href='07.html';" value="Udziel odpowiedzi" class="guzik"/>
+            <input type="button" onclick="location.href='10.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
     
     </body>

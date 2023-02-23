@@ -13,14 +13,15 @@
             var pass2 = "1946-1956 i 1939-1945";
             var pass3 = "1946-1956, 1939-1945";
             var pass4 = "1939-1945, 1946-1956";
+            var pass5 = "1939-1945 1946-1956";
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
-                let password = prompt("Podaj odpowiedź z zadania nr 09");
+                let password = prompt("Podaj odpowiedź z zadania nr 09 (odpowiedź podaj w formacie YYYY-YYYY, YYYY-YYYY");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1 || password === pass2 || password === pass3 || password === pass4){
+            if(password === pass1 || password === pass2 || password === pass3 || password === pass4 || password === pass5){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
@@ -46,11 +47,11 @@
             <p><img src="lokacje\10_maltanka.png" alt="" width="480" height="270" class="zdj"/></p>
             <p>Kolejka Parkowa Maltanka to niewielki, starodawny pociąg,<br>
                 który przewozi turystów z Ronda Śródki do Nowego Zoo.<br>
-                Początkowa stacja- „Maltanka”, znajduje się nad północno-zachodnim brzegiem Jeziora Maltańskiego. Tutaj można kupić<br>
+                Początkowa stacja znajduje się nad północno-zachodnim brzegiem Jeziora Maltańskiego. Tutaj można kupić<br>
                 bilety oraz odwiedzić maltankową restaurację.<br>
-                Na stacji „Ptyś” można wysiąść, aby udać się na Termy Maltańskie,<br>
+                Na kolejnej stacji, można wysiąść, aby udać się na Termy Maltańskie,<br>
                 następnie na „Balbince” mijają się dwa pociągi. Kolejka kończy<br>
-                bieg na stacji „Zwierzyniec”, gdzie możemy udać się do Nowego Zoo.<br>
+                bieg na stacji, z której możemy udać się do Nowego Zoo.<br>
                 W sezonie Maltanka jeździ co pół godziny.</p>
         </section>
 
