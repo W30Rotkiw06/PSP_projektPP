@@ -12,13 +12,16 @@
         <SCRIPT language="JavaScript">
             var password; 
             var pass1=3;
+            var pass2 = "trzy";
             
             let counter = 0;
             let wasGuessed = false;
 
             while(!wasGuessed && counter < 3){
                 let password = prompt("Podaj odpowiedź z zadania nr 06");
-            if(password == pass1){ // == celowo
+                if(password != null)
+                    password = password.toLowerCase();
+            if(password == pass1 || password === pass2){ // == celowo
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
