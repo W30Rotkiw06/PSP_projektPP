@@ -3,49 +3,81 @@
 
     <head>
         <meta charset="UFT-8">
-        <link rel="shortcut icon" href="logo.png">
-        <title>Poznaj Swój Poznań</title>
+        <link rel="shortcut icon" href="assety/logo.png">
+        <title>2F | Poznaj Swój Poznań</title>
     </head>
 
     
     <body>
 
         <section class="txt">
-            <h1>NADCHODZI COŚ WIELKIEGO</h1>
-            <p><img src="logo.png" alt="" width="400" class="zdj"/></p>
+            <h1 class="naglowek">STAY TUNED</h1>
+            <p><img src="assety/logo.png" alt="" width="400" class="zdj"/></p>
             <h1 id="odliczanie" class="licznik"></h1>
             <p class="psp">Poznaj Swój Poznań | 2F</p>
         </section>
         <script>
-            // Set the date we're counting down to
+            // Ustawienie daty
             var countDownDate = new Date("Mar 1, 2023 10:40:00").getTime();
-            
-            // Update the count down every 1 second
+            var days = 0;
+            var hours = 0;
+
+            // Odświeżanie co sekundę
             var x = setInterval(function() {
             
-              // Get today's date and time
-              var now = new Date().getTime();
+            // dzisiejsza data
+            var now = new Date().getTime();
             
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
+            // obliczanie odległości między dzisiejszą a zaplanowaną datą
+            var distance = countDownDate - now;
             
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Obliczenie dni, godzin, min i sek
+            if(Math.floor(distance / (1000 * 60 * 60 * 24)) != 0)
+                days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            else{
+                days = "";
+            }
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes =  Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds =  Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            // dopisywanie interpunkci i napisu dni
+            if (days > 1)
+            days = days + " dni ";
+            else{
+                if(days == 1)
+                days = days + " dzień ";
+            }
             
-              // Display the result in the element with id="odliczanie"
-              document.getElementById("odliczanie").innerHTML = days + " dni " + hours + ":"
-              + minutes + ":" + seconds;
             
-              // If the count down is finished, write some text
-              if (distance < 0) {
+            if(hours < 10){
+                hours = "0" + hours;}
+            hours = hours + ":";
+
+            if (hours == "00:" && days == "")
+            hours = "";
+
+            if (minutes < 10){
+                minutes = "0" + minutes;}
+            minutes = minutes + ":";
+
+        
+            if(seconds < 10)
+            seconds = "0"+  seconds;
+
+
+
+            // Wyświetlenie
+            document.getElementById("odliczanie").innerHTML = days+ hours + minutes + seconds;
+            
+            // Po zakończeniu odliczania
+            if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("odliczanie").innerHTML = "0 dni 00:00:00";
-              }
+                document.getElementById("odliczanie").innerHTML = "00:00:00";
+            }
             }, 1000);
-            // https://www.w3schools.com/howto/howto_js_countdown.asp
             </script>
     
     </body>
@@ -59,16 +91,24 @@
         }
         .txt{
             text-align: center;
-            position: relative; bottom: 20px;
+            position: relative; bottom: 40px;
         }
 
         .licznik{
             font-size: 80px;
-            position: relative; bottom: 10px;
+            position: relative; bottom: 30px;
         }
         .psp{
             font-size: small;
-            position: relative; bottom: 80px;
+            position: relative; bottom: 100px;
+        }
+
+        .naglowek{
+            font-size: 70px;
+            font-style: oblique;
         }
     </style>
 </html>
+
+<!--Autor: Wiktor Wieczorek;
+kod js powstał na bazie https://www.w3schools.com/howto/howto_js_countdown.asp-->
