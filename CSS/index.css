@@ -91,6 +91,22 @@ a:active{
     color: blue;
     
 }
+.ig_logo{
+    position: relative; top: 4px;
+}
+
+.link_ig{
+    color:#17252A;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.link_ig_wh{
+    color:#feffff;
+    text-decoration: underline;
+    font-size: larger;
+}
+
 
 /* logo to jest niewidoczne, służy po to aby napis PsP wyświetlał się na środku*/
 .logo2{
