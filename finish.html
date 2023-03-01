@@ -10,6 +10,7 @@
         <SCRIPT language="JavaScript">
             
             let pass1 = "szklarka";
+            let pass2 = "szklarki";
 
             let counter = 0;
             let wasGuessed = false;
@@ -18,7 +19,7 @@
                 let password = prompt("Podaj odpowiedź z zadania nr 12\nWpisz nazwę rzeki");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1){
+            if(password === pass1 || password === pass2){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
