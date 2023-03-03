@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UFT-8">
-        <meta name="viewport" content="width=width, initial-scale=0.6">
+        <meta name="viewport" content="width=width, initial-scale=0.55">
         <link rel="shortcut icon" href="logo.png">
         <title>10 - Maltanka</title>
         <link rel="stylesheet" href="CSS\index.css">
@@ -15,6 +15,7 @@
             var pass3 = "1946-1956, 1939-1945";
             var pass4 = "1939-1945, 1946-1956";
             var pass5 = "1939-1945 1946-1956";
+            var pass6 = "1946-1956 1939-1945";
             let counter = 0;
             let wasGuessed = false;
 
@@ -22,7 +23,7 @@
                 let password = prompt("Podaj odpowiedź z zadania nr 09 (odpowiedź podaj w formacie YYYY-YYYY, YYYY-YYYY");
                 if(password != null)
                     password = password.toLowerCase();
-            if(password === pass1 || password === pass2 || password === pass3 || password === pass4 || password === pass5){
+            if(password === pass1 || password === pass2 || password === pass3 || password === pass4 || password === pass5 || password === pass6){
                 alert("Dobra odpowiedź!");  
                 wasGuessed = true;
             }else{
@@ -66,5 +67,5 @@
         </section>
         
     </body>
-    <footer><p class="2F2023">© 2F 2023</p></footer>
+    <footer><p class="F2023">Strona została stworzona przez klasę 2F LOMM<br>na potrzebę projektu na podstawy przedsiębiorczości.</p></footer>
 </html>
