@@ -57,7 +57,7 @@ a:active{
 }
 
 .opis_czarny{
-    font-size: large;
+    font-size: larger;
     text-align: center;
     font-family: Arial;
     color: #17252A;
@@ -114,6 +114,9 @@ a:active{
     position: relative; bottom: 20px;
 }
 
+table{
+    text-align: center;
+}
 /* Guziki */
 
 .guzik{
