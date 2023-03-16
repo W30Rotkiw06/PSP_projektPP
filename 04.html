@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="PL">
-
     <head>
         <meta charset="UFT-8">
-        <meta name="viewport" content="width=width, initial-scale=0.55">
+        <meta name="viewport" content="width=device-width=width, initial-scale=0.55">
         <link rel="shortcut icon" href="assety\logo.png">
         <title>04 - Centrum Szyfrów Enigma</title>
         <link rel="stylesheet" href="CSS\index.css">
@@ -26,15 +25,16 @@
                 if(counter != 1)
                 alert(`Zła odpowiedź, to była ${counter+1} próba`);
                 else{
-                    alert(`Zła odpowiedź, to była ${counter+1} próba\nPS https://pl.wikipedia.org/wiki/Pomnik_Ofiar_Czerwca_1956`);
-                }
+                    alert(`Zła odpowiedź, to była ${counter+1} próba`);
+                    let wiki = confirm("Wiemy, że to pytanie mogło sprawić duże trudności, dlatego czy chcesz aby nastąpiło przekierowanie na Wikipedię?");
+                    if (wiki){
+                        open('https://pl.wikipedia.org/wiki/Pomnik_Ofiar_Czerwca_1956');}
             }
                 counter ++;
                 if (counter == 3 && !wasGuessed)
                     window.location="index.html#mapa";
-            }    
+            } }   
         </SCRIPT>
-
     </head>
     <header>
         <h1> <a href="index.html"><img src="assety\logo.png" alt="" class="logo" width="96" height="96" href="index.html"></a>
@@ -45,19 +45,21 @@
     <body>
         <section class="opis_czarny">
             <h1 class="naglowek">Centrum Szyfrów Enigma</h1>
-            <p><img src="lokacje\04_centrum_szyfrow.png" alt="" width="480" height="270" class="zdj"/></p>
-
-            <p> Centrum Szyfrów Enigma to miejsce poświęcone niemieckiej maszynie szyfrującej<br>
-                Enigma oraz trzem polskim kryptologom, którzy złamali jej szyfr: Marianowi <br>
-                Rejewskiemu, Henrykowi Zygalskiemu i Jerzemu Różyckiemu. Placówka ta, znajdująca się<br>
-                przy ulicy Święty Marcin, jest to nowe miejsce na mapie Poznania - została otwarta w 2021 roku.<br>
-            </p>
-
+            <p><img src="lokacje\04_centrum_szyfrow.png" alt="" width="580" class="zdj"/></p>
+            <table align="center">
+                <tr>
+                    <td width="650">
+                        <p> Centrum Szyfrów Enigma to miejsce poświęcone niemieckiej maszynie szyfrującej
+                            Enigma oraz trzem polskim kryptologom, którzy złamali jej szyfr: Marianowi 
+                            Rejewskiemu, Henrykowi Zygalskiemu i Jerzemu Różyckiemu. Placówka ta, znajdująca się
+                            przy ulicy Święty Marcin, jest to nowe miejsce na mapie Poznania - została otwarta w 2021 roku.
+                        </p></td> </tr>
+            </table>
         </section>
 
         <section class="opis_bialy" id="zadanie">
             <h1 class="naglowek_bialy">ZADANIE</h1>
-            <p> Korzystając z Szyfru Cezara przetłumacz (przesunięcie o 3) :<br> Kgótżm Ażjcnuml<br>Octlcó Tgłgzuml<br>Łgtaż Trbżeml</p>
+            <p> Korzystając z Szyfru Cezara przetłumacz (przesunięcie o 3) : Kgótżm Ażjcnuml<br>Octlcó Tgłgzuml<br>Łgtaż Trbżeml</p>
             <input type="button" onclick="location.href='index.html#mapa';" value="Powrót do mapy" class="guzik"/>
             <input type="button" onclick="location.href='05.html';" value="Udziel odpowiedzi" class="guzik"/>
         </section>
